@@ -7,16 +7,16 @@
 
 declare(strict_types=1);
 
-namespace JeckelLab\Contract\Domain\Exception;
+namespace JeckelLab\Contract\Core\Exception;
 
 use Throwable;
 
 /**
- * Interface DomainException
- * @package JeckelLab\Contract\Domain\Exception
+ * Interface CoreException
+ * @package JeckelLab\Contract\Core\Exception
  * @psalm-immutable
  */
-interface DomainException extends Throwable
+interface CoreException extends Throwable
 {
 
 }

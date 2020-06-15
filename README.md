@@ -6,4 +6,6 @@ List of interfaces use as contract in other packages or DD projects
 
 This contract include some strong typings, and psalm validation.
 
-Please also read [psalm template](https://psalm.dev/docs/annotating_code/templated_annotations/) documentation.
+Please also read some Psalm documentation:
+ - [psalm template](https://psalm.dev/docs/annotating_code/templated_annotations/)
+ - [psalm immutable](https://psalm.dev/articles/immutability-and-beyond)

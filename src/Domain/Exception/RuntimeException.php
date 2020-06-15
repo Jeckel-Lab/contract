@@ -9,14 +9,13 @@ declare(strict_types=1);
 
 namespace JeckelLab\Contract\Domain\Exception;
 
-use Throwable;
-
 /**
- * Interface DomainException
+ * Class RuntimeException
  * @package JeckelLab\Contract\Domain\Exception
  * @psalm-immutable
+ * @psalm-suppress MutableDependency
  */
-interface DomainException extends Throwable
+class RuntimeException extends \RuntimeException implements DomainException
 {
 
 }
