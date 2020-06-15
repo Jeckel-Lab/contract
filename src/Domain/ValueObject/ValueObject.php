@@ -7,11 +7,23 @@
 
 declare(strict_types=1);
 
+namespace JeckelLab\Contract\Domain\ValueObject;
+
 /**
  * Interface ValueObject
  * @psalm-immutable
+ * @template T
  */
 interface ValueObject
 {
+    /**
+     * @paslm-return T
+     * @return T
+     */
+    public function toScalar();
 
+    /**
+     * @return string
+     */
+    public function __toString(): string;
 }
