@@ -12,6 +12,8 @@ namespace JeckelLab\Contract\Domain\Exception;
 /**
  * Class InvalidArgumentException
  * @package JeckelLab\Contract\Domain\Exception
+ * @psalm-immutable
+ * @psalm-suppress MutableDependency
  */
 class InvalidArgumentException extends \InvalidArgumentException implements DomainException
 {

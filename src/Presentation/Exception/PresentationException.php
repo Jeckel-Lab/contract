@@ -12,6 +12,7 @@ use Throwable;
 /**
  * Interface PresentationException
  * @package JeckelLab\Contract\Presentation\Exception
+ * @psalm-immutable
  */
 interface PresentationException extends Throwable
 {

@@ -12,6 +12,7 @@ use JeckelLab\Contract\Domain\Exception\DomainException;
 /**
  * Interface ValueObjectExceptionInterface
  * @package ValueObject\Exception
+ * @psalm-immutable
  */
 interface ValueObjectException extends DomainException
 {

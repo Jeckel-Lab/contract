@@ -14,6 +14,7 @@ use Throwable;
 /**
  * Interface DomainException
  * @package JeckelLab\Contract\Domain\Exception
+ * @psalm-immutable
  */
 interface DomainException extends Throwable
 {

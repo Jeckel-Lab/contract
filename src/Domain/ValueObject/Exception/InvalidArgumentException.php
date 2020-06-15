@@ -14,6 +14,7 @@ use JeckelLab\Contract\Domain\Exception\InvalidArgumentException as DomainInvali
 /**
  * Class InvalidArgumentException
  * @package ValueObject\Exception
+ * @psalm-immutable
  */
 class InvalidArgumentException extends DomainInvalidArgumentException implements ValueObjectException
 {
