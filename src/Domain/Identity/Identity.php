@@ -8,6 +8,7 @@
 namespace JeckelLab\Contract\Domain\Identity;
 
 use JeckelLab\Contract\Domain\Equality;
+use JeckelLab\Contract\Domain\Identity\Exception\InvalidIdException;
 
 /**
  * Interface Identity
@@ -20,6 +21,7 @@ interface Identity extends Equality
     /**
      * IdAbstract constructor.
      * @param T|null $id
+     * @throws InvalidIdException
      */
     public function __construct($id);
 
