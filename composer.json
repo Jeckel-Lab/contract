@@ -1,0 +1,27 @@
+{
+  "name": "jeckel-lab/contract",
+  "description": "Contract / Interfaces used by other packages and DDD projects",
+  "type": "library",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Julien Mercier-Rojas",
+      "email": "julien@jeckel-lab.fr"
+    }
+  ],
+  "require": {
+    "php": "^7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "JeckelLab\\Contract\\": "src/"
+    }
+  },
+  "require-dev": {
+    "vimeo/psalm": "^3.11",
+    "squizlabs/php_codesniffer": "^3.5",
+    "phpmd/phpmd": "^2.8",
+    "phpro/grumphp": "^0.19.0"
+  }
+}
