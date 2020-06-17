@@ -17,7 +17,7 @@ namespace JeckelLab\Contract\Domain\ValueObject;
 interface ValueObject
 {
     /**
-     * @paslm-return T
+     * @psalm-return T
      * @return T
      */
     public function toScalar();

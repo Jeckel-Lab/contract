@@ -18,6 +18,7 @@ interface Equality
     /**
      * @param static $object
      * @return bool
+     * @psalm-mutation-free
      */
     public function equals($object): bool;
 }
