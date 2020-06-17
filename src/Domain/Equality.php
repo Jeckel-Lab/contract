@@ -5,8 +5,6 @@
  * Created at: 30/05/2020
  */
 
-declare(strict_types=1);
-
 namespace JeckelLab\Contract\Domain;
 
 /**
