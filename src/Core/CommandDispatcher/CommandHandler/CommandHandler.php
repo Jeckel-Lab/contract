@@ -5,8 +5,6 @@
  * Created at: 15/06/2020
  */
 
-declare(strict_types=1);
-
 namespace JeckelLab\Contract\Core\CommandDispatcher\CommandHandler;
 
 use JeckelLab\Contract\Core\CommandDispatcher\Command\Command;
