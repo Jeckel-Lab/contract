@@ -12,17 +12,20 @@ Require **`php >= 7.2.*`**
 
 ### Core
 
-- **[CommandDispatcher](src/Core/CommandDispatcher/)**: Define all contract for the **command bus** implementation with `Command`, `CommandHandler` and `CommandResponse`.
+- **[CommandDispatcher](src/Core/CommandDispatcher/)**: Define all contract for the **command bus** implementation with 
+    - **[Command](src/Core/CommandDispatcher/Command/Command.php)**
+    - **[CommandHandler](src/Core/CommandDispatcher/CommandHandler/CommandHandler.php)**
+    - **[CommandResponse](src/Core/CommandDispatcher/CommandResponse/CommandResponse.php)**
 
 ### Domain
 
 - **[Dto](src/Domain/Dto/Dto.php)**: main **Dto** contract (empty for now, used to define typings)
-- **[Entity](src/Domain/Entity/Entity.php): main **Entity** contract (empty for now, used to define typings)
+- **[Entity](src/Domain/Entity/Entity.php)**: main **Entity** contract (empty for now, used to define typings)
     - **[DomainEventAwareInterface](src/Domain/Entity/DomainEventAwareInterface.php)**: Define how entities handle Events, and for `Event` type ([Trait](src/Domain/Entity/DomainEventAwareTrait.php) also available)
 - **[Event](src/Domain/Event/Event.php)**: **Event** contract, force immutability, used by `CommandResponse`, `Entity` (EventAware) and `CommandBus`
 - **[Exception](src/Domain/Exception/)**: Define a collection of Domain exceptions, all immutable
 - **[Identity](src/Domain/Identity/Identity.php)**: Main contract for entity's **Identities** with exceptions, forced immutability and `Equality` interface
-- **[ValueObject](src/Domain/ValueObject/ValueObject.php)**: force immutability on ValueObject, implements `toScalar` and `__toString` methods. See[psalm template](https://psalm.dev/docs/annotating_code/templated_annotations/) documentation for more info.
+- **[ValueObject](src/Domain/ValueObject/ValueObject.php)**: force immutability on ValueObject, implements `toScalar` and `__toString` methods. See [psalm templating](https://psalm.dev/docs/annotating_code/templated_annotations/) documentation for more info.
 - **[Equality](src/Domain/Equality.php)**: define `equal` method, required for Identity, but can be also use for entities and value objects.
 
 ### Infrastructure
