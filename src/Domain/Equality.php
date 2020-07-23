@@ -5,8 +5,6 @@
  * Created at: 30/05/2020
  */
 
-declare(strict_types=1);
-
 namespace JeckelLab\Contract\Domain;
 
 /**
@@ -18,6 +16,7 @@ interface Equality
     /**
      * @param static $object
      * @return bool
+     * @psalm-mutation-free
      */
     public function equals($object): bool;
 }
