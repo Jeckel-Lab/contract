@@ -8,6 +8,7 @@
 namespace JeckelLab\Contract\Infrastructure\System;
 
 use DateTimeImmutable;
+use DateTimeZone;
 
 /**
  * Interface Clock
@@ -16,7 +17,8 @@ use DateTimeImmutable;
 interface Clock
 {
     /**
+     * @param DateTimeZone|null $timezone
      * @return DateTimeImmutable
      */
-    public function now(): DateTimeImmutable;
+    public function now(?DateTimeZone $timezone = null): DateTimeImmutable;
 }
