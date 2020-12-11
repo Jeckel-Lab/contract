@@ -6,7 +6,7 @@ List of interfaces use as contract in other packages or DD projects
 
 This contract includes some strong typings, object relation and psalm validation.
 
-Require **`php >= 7.2.*`**
+Require **`php >= 7.2.*`** and **`php >= 8.0`**
 
 ## Main contracts
 
