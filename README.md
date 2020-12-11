@@ -7,8 +7,6 @@ List of interfaces use as contract in other packages or DD projects
 This contract includes some strong typings, object relation and psalm validation.
 
 Require **`php >= 7.2.*`**
-- **`php 7.2.*`** ==> use tag v0.1.4
-- **`php >= 7.3` or `php 8.0`** ==> use tag v1.0.0
 
 ## Main contracts
 
