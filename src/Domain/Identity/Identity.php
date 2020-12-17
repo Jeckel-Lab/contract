@@ -20,15 +20,10 @@ interface Identity extends Equality
 {
     /**
      * IdAbstract constructor.
-     * @param T|null $id
+     * @param T $id
      * @throws InvalidIdException
      */
     public function __construct($id);
-
-    /**
-     * @return string
-     */
-    public function toScalar(): string;
 
     /**
      * @return string
