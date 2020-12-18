@@ -10,16 +10,9 @@ namespace JeckelLab\Contract\Domain\ValueObject;
 /**
  * Interface ValueObject
  * @psalm-immutable
- * @template T
  */
 interface ValueObject
 {
-    /**
-     * @psalm-return T
-     * @return T
-     */
-    public function toScalar();
-
     /**
      * @return string
      */
