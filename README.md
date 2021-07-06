@@ -8,6 +8,11 @@ This contract includes some strong typings, object relation and psalm validation
 
 Require **`php >= 7.2.*`** and **`php >= 8.0`**
 
+| Release name | Branch name | Php Version             |
+|--------------|-------------|-------------------------|
+| 1.x          | release/1.X | php >= 7.2 & php >= 8.0 |
+| 2.x          | master      | php >= 8.0              |
+
 ## Main contracts
 
 ### Core

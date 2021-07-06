@@ -14,9 +14,9 @@ namespace JeckelLab\Contract\Domain;
 interface Equality
 {
     /**
-     * @param static $object
+     * @param mixed $object
      * @return bool
      * @psalm-mutation-free
      */
-    public function equals($object): bool;
+    public function equals(mixed $object): bool;
 }
