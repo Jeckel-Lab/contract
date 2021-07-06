@@ -18,7 +18,7 @@ use JeckelLab\Contract\Domain\Event\Event;
 trait DomainEventAwareTrait
 {
     /** @var Event[] */
-    private $events = [];
+    private array $events = [];
 
     /**
      * @return Event[]

@@ -13,3 +13,6 @@ grumphp:
             threads: 1
             triggered_by: ['php']
             show_info: true
+        phpstan:
+            configuration: phpstan.neon
+            use_grumphp_paths: true

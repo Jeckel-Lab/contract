@@ -9,6 +9,7 @@ namespace JeckelLab\Contract\Domain\Identity;
 
 use JeckelLab\Contract\Domain\Equality;
 use JeckelLab\Contract\Domain\Identity\Exception\InvalidIdException;
+use Stringable;
 
 /**
  * Interface Identity
@@ -16,7 +17,7 @@ use JeckelLab\Contract\Domain\Identity\Exception\InvalidIdException;
  * @psalm-immutable
  * @template T
  */
-interface Identity extends Equality
+interface Identity extends Equality, Stringable
 {
     /**
      * IdAbstract constructor.
@@ -24,9 +25,4 @@ interface Identity extends Equality
      * @throws InvalidIdException
      */
     public function __construct($id);
-
-    /**
-     * @return string
-     */
-    public function __toString(): string;
 }

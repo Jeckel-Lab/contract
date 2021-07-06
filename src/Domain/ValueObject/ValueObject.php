@@ -7,14 +7,12 @@
 
 namespace JeckelLab\Contract\Domain\ValueObject;
 
+use Stringable;
+
 /**
  * Interface ValueObject
  * @psalm-immutable
  */
-interface ValueObject
+interface ValueObject extends Stringable
 {
-    /**
-     * @return string
-     */
-    public function __toString(): string;
 }
