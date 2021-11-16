@@ -16,3 +16,19 @@ grumphp:
         phpstan:
             configuration: phpstan.neon
             use_grumphp_paths: true
+        composer_require_checker:
+            composer_file: 'composer.json'
+            config_file: ~
+            ignore_parse_errors: false
+            triggered_by: [ 'composer.json', 'composer.lock', '*.php' ]
+        git_branch_name:
+            whitelist:
+                - "feature/*"
+                - "bugfix/*"
+                - "hotfix/*"
+            blacklist:
+                - "develop"
+                - "master"
+                - "main"
+            additional_modifiers: ''
+            allow_detached_head: true

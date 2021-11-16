@@ -9,12 +9,10 @@ declare(strict_types=1);
 
 namespace JeckelLab\Contract\Presentation\ViewModel;
 
-use JsonSerializable;
-
 /**
  * @psalm-immutable
  */
-interface ViewModel extends JsonSerializable
+interface ViewModel
 {
 
 }
