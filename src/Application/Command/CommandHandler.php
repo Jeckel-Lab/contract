@@ -12,13 +12,13 @@ namespace JeckelLab\Contract\Application\Command;
 /**
  * Interface CommandHandlerInterface
  * @package JeckelLab\Contract\Application\Command
- * @template T of CommandInterface
+ * @template T of Command
  */
-interface CommandHandlerInterface
+interface CommandHandler
 {
     /**
      * @param T $command
-     * @return CommandResponseInterface
+     * @return CommandResponse
      */
-    public function handle(CommandInterface $command): CommandResponseInterface;
+    public function handle(Command $command): CommandResponse;
 }

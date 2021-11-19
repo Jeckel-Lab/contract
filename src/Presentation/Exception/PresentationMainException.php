@@ -7,14 +7,14 @@
 
 namespace JeckelLab\Contract\Presentation\Exception;
 
-use JeckelLab\Contract\Exception\ExceptionInterface;
+use JeckelLab\Contract\Exception\MainException;
 
 /**
  * Interface PresentationException
  * @package JeckelLab\Contract\Presentation\Exception
  * @psalm-immutable
  */
-interface PresentationExceptionInterface extends ExceptionInterface
+interface PresentationMainException extends MainException
 {
 
 }

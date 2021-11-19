@@ -16,7 +16,7 @@ use Stringable;
  * @package JeckelLab\Contract\Application\Domain\ValueObject
  * @template T of int|string
  */
-interface ValueObjectInterface extends Stringable
+interface ValueObject extends Stringable
 {
     /**
      * @return T

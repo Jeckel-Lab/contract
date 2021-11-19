@@ -17,7 +17,7 @@ use LogicException;
  * @psalm-immutable
  * @psalm-suppress MutableDependency
  */
-class NoHandlerDefinedForCommandException extends LogicException implements CommandBusExceptionInterface
+class NoHandlerDefinedForCommandException extends LogicException implements CommandBusException
 {
 
 }

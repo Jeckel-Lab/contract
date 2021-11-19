@@ -14,7 +14,7 @@ namespace JeckelLab\Contract\Application\Event;
  * @package JeckelLab\Contract\Application\Event
  * @psalm-immutable
  */
-interface ApplicationEventInterface
+interface ApplicationEvent
 {
 
 }

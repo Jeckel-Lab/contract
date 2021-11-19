@@ -16,7 +16,7 @@ use Throwable;
  * @package JeckelLab\Contract\Exception
  * @psalm-immutable
  */
-interface ExceptionInterface extends Throwable
+interface MainException extends Throwable
 {
 
 }

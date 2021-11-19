@@ -10,14 +10,14 @@ namespace JeckelLab\Contract\Application\Query;
 /**
  * Interface QueryHandlerInterface
  * @package JeckelLab\Contract\Application\Query
- * @template T of QueryInterface
+ * @template T of Query
  */
-interface QueryHandlerInterface
+interface QueryHandler
 {
     /**
      * @psalm-param T $query
-     * @param QueryInterface $query
-     * @return QueryResultInterface
+     * @param Query   $query
+     * @return QueryResult
      */
-    public function handle(QueryInterface $query): QueryResultInterface;
+    public function handle(Query $query): QueryResult;
 }

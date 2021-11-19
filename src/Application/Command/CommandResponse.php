@@ -9,14 +9,14 @@ declare(strict_types=1);
 
 namespace JeckelLab\Contract\Application\Command;
 
-use JeckelLab\Contract\Application\Event\ApplicationEventInterface;
+use JeckelLab\Contract\Application\Event\ApplicationEvent;
 
 /**
  * Interface CommandResponseInterface
  * @package JeckelLab\Contract\Application\Command
  * @psalm-immutable
  */
-interface CommandResponseInterface
+interface CommandResponse
 {
     /**
      * @return bool
@@ -34,7 +34,7 @@ interface CommandResponseInterface
     public function getFailureReason(): ?string;
 
     /**
-     * @return ApplicationEventInterface[]
+     * @return ApplicationEvent[]
      */
     public function events(): array;
 }

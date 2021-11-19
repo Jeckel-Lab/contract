@@ -5,14 +5,16 @@
  * Created at: 18/11/2021
  */
 
+declare(strict_types=1);
+
 namespace JeckelLab\Contract\Application\Query;
 
 /**
- * Interface QueryInterface
+ * Interface QueryResultInterface
  * @package JeckelLab\Contract\Application\Query
  * @psalm-immutable
  */
-interface QueryInterface
+interface QueryResult
 {
 
 }

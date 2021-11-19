@@ -11,7 +11,7 @@ namespace JeckelLab\Contract\Presentation\ViewModel;
  * Interface ViewModelInterface
  * @package JeckelLab\Contract\Presentation\ViewModel
  */
-interface ViewModelInterface
+interface ViewModel
 {
 
 }

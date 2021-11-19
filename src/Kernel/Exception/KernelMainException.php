@@ -9,14 +9,14 @@ declare(strict_types=1);
 
 namespace JeckelLab\Contract\Kernel\Exception;
 
-use JeckelLab\Contract\Exception\ExceptionInterface;
+use JeckelLab\Contract\Exception\MainException;
 
 /**
  * Interface KernelExceptionInterface
  * @package JeckelLab\Contract\Kernel\Exception
  * @psalm-immutable
  */
-interface KernelExceptionInterface extends ExceptionInterface
+interface KernelMainException extends MainException
 {
 
 }

@@ -9,14 +9,14 @@ declare(strict_types=1);
 
 namespace JeckelLab\Contract\Kernel\CommandBus\Exception;
 
-use JeckelLab\Contract\Kernel\Exception\KernelExceptionInterface;
+use JeckelLab\Contract\Kernel\Exception\KernelMainException;
 
 /**
  * Interface CommandBusExceptionInterface
  * @package JeckelLab\Contract\Kernel\CommandBus\Exception
  * @psalm-immutable
  */
-interface CommandBusExceptionInterface extends KernelExceptionInterface
+interface CommandBusException extends KernelMainException
 {
 
 }

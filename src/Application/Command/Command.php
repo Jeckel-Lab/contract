@@ -12,7 +12,7 @@ namespace JeckelLab\Contract\Application\Command;
  * @package JeckelLab\Contract\Application\Command
  * @psalm-immutable
  */
-interface CommandInterface
+interface Command
 {
 
 }

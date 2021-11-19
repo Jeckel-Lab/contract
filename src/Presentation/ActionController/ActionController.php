@@ -14,7 +14,7 @@ use Psr\Http\Message\ServerRequestInterface as Request;
  * Interface ActionControllerInterface
  * @package JeckelLab\Contract\Presentation\ActionController
  */
-interface ActionControllerInterface
+interface ActionController
 {
     /**
      * @param Request  $request

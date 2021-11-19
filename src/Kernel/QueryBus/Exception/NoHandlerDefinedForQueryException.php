@@ -17,7 +17,7 @@ use LogicException;
  * @psalm-immutable
  * @psalm-suppress MutableDependency
  */
-class NoHandlerDefinedForQueryException extends LogicException implements QueryBusExceptionInterface
+class NoHandlerDefinedForQueryException extends LogicException implements QueryBusException
 {
 
 }

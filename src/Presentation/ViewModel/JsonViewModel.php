@@ -15,7 +15,7 @@ use JsonSerializable;
  * Interface JsonViewModelInterface
  * @package JeckelLab\Contract\Presentation\ViewModel
  */
-interface JsonViewModelInterface extends ViewModelInterface, JsonSerializable
+interface JsonViewModel extends ViewModel, JsonSerializable
 {
 
 }
