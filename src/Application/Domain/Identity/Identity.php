@@ -7,15 +7,36 @@
 
 namespace JeckelLab\Contract\Application\Domain\Identity;
 
-use JeckelLab\Contract\Common\Equality;
 use Stringable;
 
 /**
  * Interface Identity
  * @package JeckelLab\Contract\Application\Domain\Identity
+ * @template IdentityType
  * @psalm-immutable
  */
-interface Identity extends Equality, Stringable
+interface Identity extends Stringable
 {
+    /**
+     * @param IdentityType $id
+     */
+    public function __construct($id);
 
+    /**
+     * @template T
+     * @param T|null $id
+     * @return Identity<T>
+     */
+    public static function new($id = null);
+
+    /**
+     * @param Identity<IdentityType> $other
+     * @return bool
+     */
+    public function equalsTo($other): bool;
+
+    /**
+     * @return IdentityType
+     */
+    public function id();
 }
