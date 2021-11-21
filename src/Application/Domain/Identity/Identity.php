@@ -30,6 +30,13 @@ interface Identity extends Stringable
     public static function new($id = null);
 
     /**
+     * @template T
+     * @param T $id
+     * @return Identity<T>
+     */
+    public static function from($id);
+
+    /**
      * @param Identity<IdentityType> $other
      * @return bool
      */
