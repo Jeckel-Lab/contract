@@ -23,11 +23,9 @@ interface Identity extends Stringable
     public function __construct($id);
 
     /**
-     * @template T
-     * @param T|null $id
-     * @return Identity<T>
+     * @return Identity<IdentityType>
      */
-    public static function new($id = null);
+    public static function new();
 
     /**
      * @template T
