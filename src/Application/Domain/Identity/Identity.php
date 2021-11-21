@@ -14,14 +14,10 @@ use Stringable;
  * @package JeckelLab\Contract\Application\Domain\Identity
  * @template IdentityType
  * @psalm-immutable
+ * @method private __construct($id)
  */
 interface Identity extends Stringable
 {
-    /**
-     * @param IdentityType $id
-     */
-    public function __construct($id);
-
     /**
      * @return Identity<IdentityType>
      */
