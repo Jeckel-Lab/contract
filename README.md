@@ -1,5 +1,7 @@
-[![Build Status](https://travis-ci.org/Jeckel-Lab/contract.svg?branch=master)](https://travis-ci.org/Jeckel-Lab/contract)
-[![Latest Stable Version](https://poser.pugx.org/jeckel-lab/contract/v/stable)](https://packagist.org/packages/jeckel-lab/contract) [![Total Downloads](https://poser.pugx.org/jeckel-lab/contract/downloads)](https://packagist.org/packages/jeckel-lab/contract)
+[![Latest Stable Version](https://poser.pugx.org/jeckel-lab/contract/v/stable)](https://packagist.org/packages/jeckel-lab/contract)
+[![Total Downloads](https://poser.pugx.org/jeckel-lab/contract/downloads)](https://packagist.org/packages/jeckel-lab/contract)
+[![Build Status](https://github.com/jeckel-lab/contract/workflows/validate/badge.svg)](https://github.com/Jeckel-Lab/contract/actions)
+
 # Jeckel-Lab Contract
 
 List of interfaces use as contract in other packages or DD projects
@@ -11,7 +13,7 @@ Require **`php >= 7.2.*`** and **`php >= 8.0`**
 | Release name | Branch name | Php Version             |
 |--------------|-------------|-------------------------|
 | 1.x          | release/1.X | php >= 7.2 & php >= 8.0 |
-| 2.x          | master      | php >= 8.0              |
+| 2.x          | main        | php >= 8.0              |
 
 ## Main contracts
 
