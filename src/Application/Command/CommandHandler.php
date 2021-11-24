@@ -12,12 +12,18 @@ namespace JeckelLab\Contract\Application\Command;
 /**
  * Interface CommandHandlerInterface
  * @package JeckelLab\Contract\Application\Command
- * @template T of Command
+ * @template CommandType of Command
  */
 interface CommandHandler
 {
     /**
-     * @param T $command
+     * @param Command $command
+     * @return bool
+     */
+    public static function accept(Command $command): bool;
+
+    /**
+     * @param CommandType $command
      * @return CommandResponse
      */
     public function handle(Command $command): CommandResponse;
