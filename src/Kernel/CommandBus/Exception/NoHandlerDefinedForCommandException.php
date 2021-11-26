@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace JeckelLab\Contract\Kernel\CommandBus\Exception;
 
+use JeckelLab\Contract\Application\Command\Command;
 use LogicException;
 
 /**
@@ -19,5 +20,11 @@ use LogicException;
  */
 class NoHandlerDefinedForCommandException extends LogicException implements CommandBusException
 {
-
+    /**
+     * @param Command $command
+     */
+    public function __construct(Command $command)
+    {
+        parent::__construct(sprintf('No command handler found for command %s', get_class($command)));
+    }
 }

@@ -31,7 +31,7 @@ interface CommandResponse
     /**
      * @return string|null
      */
-    public function getFailureReason(): ?string;
+    public function failureReason(): ?string;
 
     /**
      * @return ApplicationEvent[]
