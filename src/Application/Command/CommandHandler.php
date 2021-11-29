@@ -17,10 +17,9 @@ namespace JeckelLab\Contract\Application\Command;
 interface CommandHandler
 {
     /**
-     * @param Command $command
-     * @return bool
+     * @return list<class-string<Command>>
      */
-    public static function accept(Command $command): bool;
+    public static function accept(): array;
 
     /**
      * @param CommandType $command
