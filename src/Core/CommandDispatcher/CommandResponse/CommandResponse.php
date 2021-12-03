@@ -2,18 +2,16 @@
 
 /**
  * @author: Julien Mercier-Rojas <julien@jeckel-lab.fr>
- * Created at: 18/11/2021
+ * Created at: 03/12/2021
  */
 
-declare(strict_types=1);
+namespace JeckelLab\Contract\Core\CommandDispatcher\CommandResponse;
 
-namespace JeckelLab\Contract\Application\Command;
-
-use JeckelLab\Contract\Application\Event\ApplicationEvent;
+use JeckelLab\Contract\Domain\Event\Event;
 
 /**
- * Interface CommandResponseInterface
- * @package JeckelLab\Contract\Application\Command
+ * Interface CommandResponse
+ * @package JeckelLab\Contract\Core\CommandDispatcher\CommandResponse
  * @psalm-immutable
  */
 interface CommandResponse
@@ -34,7 +32,7 @@ interface CommandResponse
     public function failureReason(): ?string;
 
     /**
-     * @return ApplicationEvent[]
+     * @return null|iterable<Event>
      */
-    public function events(): array;
+    public function events(): ?iterable;
 }
