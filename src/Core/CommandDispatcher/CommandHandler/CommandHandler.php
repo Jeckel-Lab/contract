@@ -19,7 +19,7 @@ use JeckelLab\Contract\Core\CommandDispatcher\Exception\InvalidCommandException;
 interface CommandHandler
 {
     /**
-     * @return array<class-string<Command>>
+     * @return list<class-string<Command>>
      * @psalm-mutation-free
      */
     public static function getHandledCommands(): array;
