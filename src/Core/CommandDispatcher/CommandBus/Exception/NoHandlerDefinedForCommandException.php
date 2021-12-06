@@ -2,21 +2,20 @@
 
 /**
  * @author: Julien Mercier-Rojas <julien@jeckel-lab.fr>
- * Created at: 18/11/2021
+ * Created at: 03/12/2021
  */
 
 declare(strict_types=1);
 
-namespace JeckelLab\Contract\Kernel\CommandBus\Exception;
+namespace JeckelLab\Contract\Core\CommandDispatcher\CommandBus\Exception;
 
-use JeckelLab\Contract\Application\Command\Command;
-use LogicException;
+use JeckelLab\Contract\Core\CommandDispatcher\Command\Command;
+use JeckelLab\Contract\Core\Exception\LogicException;
 
 /**
  * Class NoHandlerDefinedForCommandException
- * @package JeckelLab\Contract\Kernel\CommandBus\Exception
+ * @package JeckelLab\Contract\Core\CommandDispatcher\CommandBus\Exception
  * @psalm-immutable
- * @psalm-suppress MutableDependency
  */
 class NoHandlerDefinedForCommandException extends LogicException implements CommandBusException
 {
