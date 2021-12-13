@@ -9,20 +9,32 @@ namespace JeckelLab\Contract\Domain\Identity;
 
 use JeckelLab\Contract\Domain\Equality;
 use JeckelLab\Contract\Domain\Identity\Exception\InvalidIdException;
+use JsonSerializable;
 use Stringable;
 
 /**
  * Interface Identity
  * @package JeckelLab\Contract\Domain\Identity
  * @psalm-immutable
- * @template T
+ * @template IdentityType of int|string
  */
-interface Identity extends Equality, Stringable
+interface Identity extends Equality, Stringable, JsonSerializable
 {
     /**
-     * IdAbstract constructor.
-     * @param T $id
+     * @return static
+     */
+    public static function new(): static;
+
+    /**
+     * @param int|string $identity
+     * @return static
      * @throws InvalidIdException
      */
-    public function __construct($id);
+    public static function from(int|string $identity): static;
+
+    /**
+     * @return int|string
+     * @psalm-return IdentityType
+     */
+    public function id(): int|string;
 }

@@ -7,14 +7,14 @@
 
 namespace JeckelLab\Contract\Domain\Identity\Exception;
 
-use Throwable;
+use JeckelLab\Contract\Domain\Exception\DomainException;
 
 /**
  * Interface IdentityException
  * @package JeckelLab\Contract\Domain\Identity\Exception
  * @psalm-immutable
  */
-interface IdentityException extends Throwable
+interface IdentityException extends DomainException
 {
 
 }
