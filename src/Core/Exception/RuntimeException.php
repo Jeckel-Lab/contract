@@ -17,5 +17,4 @@ namespace JeckelLab\Contract\Core\Exception;
  */
 class RuntimeException extends \RuntimeException implements CoreMainException
 {
-
 }

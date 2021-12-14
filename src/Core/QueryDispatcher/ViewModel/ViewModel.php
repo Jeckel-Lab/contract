@@ -16,5 +16,4 @@ namespace JeckelLab\Contract\Core\QueryDispatcher\ViewModel;
  */
 interface ViewModel
 {
-
 }

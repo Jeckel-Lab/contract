@@ -17,5 +17,4 @@ namespace JeckelLab\Contract\Core\Exception;
  */
 class LogicException extends \LogicException implements CoreMainException
 {
-
 }
