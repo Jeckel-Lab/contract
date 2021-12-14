@@ -17,5 +17,4 @@ namespace JeckelLab\Contract\Domain\Exception;
  */
 class LogicException extends \LogicException implements DomainException
 {
-
 }

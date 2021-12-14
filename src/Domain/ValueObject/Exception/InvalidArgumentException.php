@@ -18,5 +18,4 @@ use JeckelLab\Contract\Domain\Exception\InvalidArgumentException as DomainInvali
  */
 class InvalidArgumentException extends DomainInvalidArgumentException implements ValueObjectException
 {
-
 }

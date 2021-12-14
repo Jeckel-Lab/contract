@@ -16,5 +16,4 @@ use JeckelLab\Contract\Exception\MainException;
  */
 interface InfrastructureMainException extends MainException
 {
-
 }

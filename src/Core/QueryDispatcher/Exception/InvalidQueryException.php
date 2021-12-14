@@ -19,5 +19,4 @@ use JeckelLab\Contract\Core\Exception\RuntimeException;
  */
 class InvalidQueryException extends RuntimeException implements QueryDispatcherException
 {
-
 }

@@ -18,5 +18,4 @@ use Throwable;
  */
 interface MainException extends Throwable
 {
-
 }

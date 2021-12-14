@@ -13,5 +13,4 @@ namespace JeckelLab\Contract\Domain\Dto;
  */
 interface Dto
 {
-
 }

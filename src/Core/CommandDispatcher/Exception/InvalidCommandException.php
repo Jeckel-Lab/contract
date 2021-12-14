@@ -18,5 +18,4 @@ use JeckelLab\Contract\Core\Exception\RuntimeException;
  */
 class InvalidCommandException extends RuntimeException implements CommandDispatcherException
 {
-
 }

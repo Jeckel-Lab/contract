@@ -16,5 +16,4 @@ use JeckelLab\Contract\Core\CommandDispatcher\Exception\CommandDispatcherExcepti
  */
 interface CommandBusException extends CommandDispatcherException
 {
-
 }

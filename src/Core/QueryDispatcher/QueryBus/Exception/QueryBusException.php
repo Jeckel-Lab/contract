@@ -16,5 +16,4 @@ use JeckelLab\Contract\Core\QueryDispatcher\Exception\QueryDispatcherException;
  */
 interface QueryBusException extends QueryDispatcherException
 {
-
 }

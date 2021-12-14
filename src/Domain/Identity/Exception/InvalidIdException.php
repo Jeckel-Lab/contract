@@ -13,10 +13,19 @@ use JeckelLab\Contract\Domain\Exception\InvalidArgumentException;
 
 /**
  * Class InvalidIdException
+ *
+ * The value used to instantiate an Identity Instance doesn't match the expected format
+ *
  * @package JeckelLab\Contract\Domain\Identity\Exception
  * @psalm-immutable
  */
 class InvalidIdException extends InvalidArgumentException implements IdentityException
 {
-
+    /**
+     * @param int|string $id
+     */
+    public function __construct(int|string $id)
+    {
+        parent::__construct(sprintf('Invalid id %s provided', $id));
+    }
 }

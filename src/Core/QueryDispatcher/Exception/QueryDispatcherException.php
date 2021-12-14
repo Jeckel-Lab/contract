@@ -16,5 +16,4 @@ use JeckelLab\Contract\Core\Exception\CoreMainException;
  */
 interface QueryDispatcherException extends CoreMainException
 {
-
 }
