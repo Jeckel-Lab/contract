@@ -33,7 +33,8 @@ interface Identity extends Equality, Stringable, JsonSerializable
     public static function from(int|string $identity): static;
 
     /**
+     * @return int|string
      * @psalm-return IdentityType
      */
-    public function id();
+    public function id(): int|string;
 }
