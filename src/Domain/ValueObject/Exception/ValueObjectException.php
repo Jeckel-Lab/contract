@@ -16,5 +16,4 @@ use JeckelLab\Contract\Domain\Exception\DomainException;
  */
 interface ValueObjectException extends DomainException
 {
-
 }

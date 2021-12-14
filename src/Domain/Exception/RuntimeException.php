@@ -17,5 +17,4 @@ namespace JeckelLab\Contract\Domain\Exception;
  */
 class RuntimeException extends \RuntimeException implements DomainException
 {
-
 }

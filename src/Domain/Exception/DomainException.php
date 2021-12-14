@@ -16,5 +16,4 @@ use Throwable;
  */
 interface DomainException extends Throwable
 {
-
 }

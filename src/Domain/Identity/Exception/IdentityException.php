@@ -16,5 +16,4 @@ use JeckelLab\Contract\Domain\Exception\DomainException;
  */
 interface IdentityException extends DomainException
 {
-
 }

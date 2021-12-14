@@ -17,5 +17,4 @@ namespace JeckelLab\Contract\Domain\Exception;
  */
 class InvalidArgumentException extends \InvalidArgumentException implements DomainException
 {
-
 }

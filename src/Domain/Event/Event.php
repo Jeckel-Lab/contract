@@ -14,5 +14,4 @@ namespace JeckelLab\Contract\Domain\Event;
  */
 interface Event
 {
-
 }
