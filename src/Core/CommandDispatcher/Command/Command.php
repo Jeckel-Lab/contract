@@ -14,5 +14,4 @@ namespace JeckelLab\Contract\Core\CommandDispatcher\Command;
  */
 interface Command
 {
-
 }
