@@ -21,8 +21,8 @@ interface DomainEventAwareInterface
     public function popEvents(): array;
 
     /**
-     * @param Event $event
+     * @param Event ...$events
      * @return void
      */
-    public function addDomainEvent(Event $event): void;
+    public function addDomainEvent(Event ...$events): void;
 }

@@ -31,11 +31,11 @@ trait DomainEventAwareTrait
     }
 
     /**
-     * @param Event $event
+     * @param Event ...$events
      * @return void
      */
-    public function addDomainEvent(Event $event): void
+    public function addDomainEvent(Event ...$events): void
     {
-        $this->events[] = $event;
+        array_push($this->events, ...$events);
     }
 }
