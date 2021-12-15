@@ -13,7 +13,62 @@ Require **`php >= 7.2.*`** and **`php >= 8.0`**
 | 1.x          | release/1.X | php >= 7.2 & php >= 8.0 |
 | 2.x          | master      | php >= 8.0              |
 
-## Main contracts
+# Contract components
+
+## Domain
+
+### Entity
+
+**[Entity](src/Domain/Entity/Entity.php)**: main **Entity** contract (empty, used to define typings)
+
+### DomainEventAware
+
+**Entities** and **root aggregates** handle domain events.
+To facilitate this behaviour, you can use this **interface** and **trait**:
+- **[DomainEventAwareInterface](src/Domain/Entity/DomainEventAwareInterface.php)**
+- **[DomainEventAwareTrait](src/Domain/Entity/DomainEventAwareTrait.php)**
+
+This interface defines two methods:
+```php
+    /**
+     * @param Event ...$events
+     * @return static
+     */
+    public function addDomainEvent(Event ...$events): static;
+
+    /**
+     * @return list<Event>
+     */
+    public function popEvents(): array;
+
+```
+- `addDomainEvent` allow you to register new event occurred during a Use Case.
+- `popEvent` will empty the entity's event list at the end of a use case to dispatch them into an Event Dispatcher.
+
+Just use the interface and trait into your entity:
+```Php
+class MyEntity implement DomainEventAwareInterface
+{
+    use DomainEventAwareTrait;
+    
+    /**
+     * Example of a use case that add an event to the queue
+     * @return self
+     */
+    public function activateEntity(): self
+    {
+        $this->activated = true;
+        $this->addDomainEvent(new EntityActivated($this->id));
+        return $this;
+    }
+}
+```
+
+Later after use case is handled, you can retrieve and dispatch events:
+```php
+$eventDispatcher->dispatch($entity->popEvents());
+```
+
 
 ### Core
 
@@ -23,6 +78,8 @@ Require **`php >= 7.2.*`** and **`php >= 8.0`**
     - **[CommandResponse](src/Core/CommandDispatcher/CommandResponse/CommandResponse.php)**
 
 ### Domain
+
+
 
 - **[Dto](src/Domain/Dto/Dto.php)**: main **Dto** contract (empty for now, used to define typings)
 - **[Entity](src/Domain/Entity/Entity.php)**: main **Entity** contract (empty for now, used to define typings)

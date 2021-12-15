@@ -17,11 +17,11 @@ use JeckelLab\Contract\Domain\Event\Event;
  */
 trait DomainEventAwareTrait
 {
-    /** @var Event[] */
+    /** @var list<Event> */
     private array $events = [];
 
     /**
-     * @return Event[]
+     * @return list<Event>
      */
     public function popEvents(): array
     {
@@ -32,10 +32,11 @@ trait DomainEventAwareTrait
 
     /**
      * @param Event ...$events
-     * @return void
+     * @return static
      */
-    public function addDomainEvent(Event ...$events): void
+    public function addDomainEvent(Event ...$events): static
     {
         array_push($this->events, ...$events);
+        return $this;
     }
 }

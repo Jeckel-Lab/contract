@@ -27,7 +27,7 @@ class DomainEventAwareTraitTest extends TestCase
     {
         $entity = new DomainEventAwareEntity();
         $event = $this->createMock(Event::class);
-        $entity->addDomainEvent($event);
+        $this->assertSame($entity, $entity->addDomainEvent($event));
         $this->assertSame([$event], $entity->popEvents());
         // second call should return empty list
         $this->assertEmpty($entity->popEvents());
@@ -39,8 +39,8 @@ class DomainEventAwareTraitTest extends TestCase
         $event1 = $this->createMock(Event::class);
         $event2 = $this->createMock(Event::class);
         $event3 = $this->createMock(Event::class);
-        $entity->addDomainEvent($event1, $event2);
-        $entity->addDomainEvent($event3);
+        $this->assertSame($entity, $entity->addDomainEvent($event1, $event2));
+        $this->assertSame($entity, $entity->addDomainEvent($event3));
         $this->assertSame([$event1, $event2, $event3], $entity->popEvents());
         // second call should return empty list
         $this->assertEmpty($entity->popEvents());
