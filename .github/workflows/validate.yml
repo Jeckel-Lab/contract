@@ -33,7 +33,13 @@ jobs:
         run: ./vendor/bin/grumphp run --testsuite=github_actions
       - name: PHPUnit Coverage
         run: ./vendor/bin/phpunit --coverage-clover coverage.xml
-      - uses: codecov/codecov-action@v1
+      - uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          files: ./coverage.xml
+          flags: unittests # optional
+          fail_ci_if_error: true # optional (default = false)
+          verbose: true # optional (default = false)
       - name: Infection
         run: ./vendor/bin/infection
         env:
