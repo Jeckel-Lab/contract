@@ -171,6 +171,22 @@ $speed2 = Speed::from(85.2);
 $speed1 === $speed2; // is true
 ```
 
+## Core
+
+> To be completed
+
+### Command Dispatcher
+
+> To be completed
+
+> See detailed implementation proposal: [jeckel-lab/command-dispatcher](https://github.com/Jeckel-Lab/command-dispatcher)
+
+### Query Dispatcher
+
+> To be completed
+
+> See detailed implementation proposal: [jeckel-lab/query-dispatcher](https://github.com/Jeckel-Lab/query-dispatcher)
+
 ## Old Documentation
 
 ### Core
