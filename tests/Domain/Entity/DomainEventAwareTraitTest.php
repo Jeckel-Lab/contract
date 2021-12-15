@@ -44,6 +44,5 @@ class DomainEventAwareTraitTest extends TestCase
         $this->assertSame([$event1, $event2, $event3], $entity->popEvents());
         // second call should return empty list
         $this->assertEmpty($entity->popEvents());
-
     }
 }

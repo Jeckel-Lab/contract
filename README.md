@@ -14,16 +14,70 @@ Require **`php >= 7.2.*`** and **`php >= 8.0`**
 
 | Release name | Branch name | Php Version             |
 |--------------|-------------|-------------------------|
-| 1.x          | release/1.X | php >= 7.2 & php >= 8.0 |
+| 1.x          | release/1.X | php >= 7.2 & php <= 8.0 |
 | 2.x          | master      | php >= 8.0              |
 
-# Contract components
+# Documentation for version 2.x (php >= 8.0)
 
 ## Domain
 
+Domain contract are part of DDD implementation suggestion, it's not required and is not linked to any frameworks.
+
+### Identity
+
+[Identity](src/Domain/Identity/Identity.php) are used to define a unique identifier for an Entity or a RootAggregate.
+
+Identity must be:
+- immutable
+- final
+- constructor should be private, use a factory method:
+  - `new` ==> Generate (if possible) a new Identity object with a random value (like UUIDs)
+  - `from` ==> Instantiate Identity from an existing value
+
+> See detailed implementation proposal: [jeckel-lab/identity-contract](https://github.com/Jeckel-Lab/identity-contract)
+
 ### Entity
 
-**[Entity](src/Domain/Entity/Entity.php)**: main **Entity** contract (empty, used to define typings)
+**[Entity](src/Domain/Entity/Entity.php)**: main **Entity** contract
+
+Entity **must** have an Id implementing the `Identity` interface.
+
+Don't forget to use `@psalm templates`
+```php
+/**
+ * DiverId is using an `int` as unique identifier
+ * @implements Identity<int>
+ */
+final class DriverId implements Identity
+{
+}
+
+/**
+ * Now Driver can use a DriverId as an identifier
+ * @implements Entity<DriverId>
+ */
+class Driver implements Entity
+{
+    public function __construct(private DriverId $id)
+    {
+    }
+    
+    /**
+     * @return DriverId
+     */
+    public function getId(): Identity
+    {
+        return $id;
+    }
+}
+```
+
+### Event
+
+[Event](src/Domain/Event/Event.php) are notification about what happened during a use case.
+
+Event **must** be:
+- immutable
 
 ### DomainEventAware
 
@@ -65,6 +119,8 @@ class MyEntity implement DomainEventAwareInterface
         $this->addDomainEvent(new EntityActivated($this->id));
         return $this;
     }
+    
+    //...
 }
 ```
 
@@ -73,6 +129,49 @@ And if you use the CommandBus pattern, then you can add events to the response e
 new CommandResponse(events: $entity->popEvents());
 ```
 
+### ValueObject
+
+Using `ValueObject` to embed a value (or group of value for complex types) as an object allow you:
+- to use strong typing in the application (a `Speed` can not be mixed with any random float)
+- to embed data validation (be sure that the `Speed` is always a positive value, is lower than a reasonable value, etc.)
+
+Value object must be defined as:
+- immutable (one's instantiated, they should not be modified unless a new instance is created).
+- final
+- constructor should be private, use the static `from` method as a factory
+- when requesting to ValueObject with same value, `from` should return the same instance
+
+Think about implementing it like this:
+```Php
+final class Speed implements ValueObject
+{
+    private static $instances = [];
+
+    private function __constructor(private float $speed)
+    {
+    }
+    
+    public function from(mixed $speedValue): static
+    {
+        if (! self::$instances[$speedValue]) {
+            if ($speedValue < 0) {
+                throw new InvalidArgumentException('Speed needs to be positive');
+            }
+            self::$instances[$speedValue] = new self($speedValue);
+        }
+        self::$instances[$speedValue]
+    }
+    
+    // implements other methods
+}
+
+// And now
+$speed1 = Speed::from(85.2);
+$speed2 = Speed::from(85.2);
+$speed1 === $speed2; // is true
+```
+
+## Old Documentation
 
 ### Core
 
