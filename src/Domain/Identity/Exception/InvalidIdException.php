@@ -26,6 +26,6 @@ class InvalidIdException extends InvalidArgumentException implements IdentityExc
      */
     public function __construct(int|string $id)
     {
-        parent::__construct(sprintf('Invalid id %s provided', $id));
+        parent::__construct(sprintf('Invalid id "%s" provided', $id));
     }
 }

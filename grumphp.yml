@@ -1,4 +1,12 @@
 grumphp:
+    testsuites:
+        github_actions:
+            tasks:
+                - composer_require_checker
+                - phpcs
+                - phpmd
+                - phpstan
+                - psalm
     tasks:
         phpcs:
             whitelist_patterns:
@@ -13,6 +21,12 @@ grumphp:
             threads: 1
             triggered_by: ['php']
             show_info: true
+        phpunit:
+            config_file: ~
+            testsuite: ~
+            group: []
+            always_execute: false
+            order: null
         phpstan:
             configuration: phpstan.neon
             use_grumphp_paths: true
@@ -32,3 +46,4 @@ grumphp:
                 - "main"
             additional_modifiers: ''
             allow_detached_head: true
+        infection:

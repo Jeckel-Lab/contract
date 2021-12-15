@@ -16,13 +16,13 @@ use JeckelLab\Contract\Domain\Event\Event;
 interface DomainEventAwareInterface
 {
     /**
-     * @return Event[]
+     * @param Event ...$events
+     * @return static
      */
-    public function popEvents(): array;
+    public function addDomainEvent(Event ...$events): static;
 
     /**
-     * @param Event $event
-     * @return void
+     * @return list<Event>
      */
-    public function addDomainEvent(Event $event): void;
+    public function popEvents(): array;
 }
