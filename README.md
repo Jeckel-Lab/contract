@@ -64,9 +64,9 @@ class MyEntity implement DomainEventAwareInterface
 }
 ```
 
-Later after use case is handled, you can retrieve and dispatch events:
+And if you use the CommandBus pattern, then you can add events to the response easily:
 ```php
-$eventDispatcher->dispatch($entity->popEvents());
+new CommandResponse(events: $entity->popEvents());
 ```
 
 
