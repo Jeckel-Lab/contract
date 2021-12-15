@@ -7,10 +7,18 @@
 
 namespace JeckelLab\Contract\Domain\Entity;
 
+use JeckelLab\Contract\Domain\Identity\Identity;
+
 /**
  * Interface Entity
  * @package JeckelLab\Contract\Domain\Entity
+ * @template IdentityType of Identity
  */
 interface Entity
 {
+    /**
+     * @return Identity
+     * @psalm-return IdentityType
+     */
+    public function getId(): Identity;
 }

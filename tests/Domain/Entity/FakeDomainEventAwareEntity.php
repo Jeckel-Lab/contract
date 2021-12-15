@@ -10,12 +10,19 @@ namespace Tests\JeckelLab\Contract\Domain\Entity;
 use JeckelLab\Contract\Domain\Entity\DomainEventAwareInterface;
 use JeckelLab\Contract\Domain\Entity\DomainEventAwareTrait;
 use JeckelLab\Contract\Domain\Entity\Entity;
+use JeckelLab\Contract\Domain\Identity\Identity;
 
 /**
  * Class FakeDomainEventAwareEntity
  * @package Tests\JeckelLab\Contract\Domain\Entity
+ * @implements Entity<DummyIdentity>
  */
 final class FakeDomainEventAwareEntity implements DomainEventAwareInterface, Entity
 {
+    public function getId(): Identity
+    {
+        throw new \LogicException('Should not be called');
+    }
+
     use DomainEventAwareTrait;
 }
