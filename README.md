@@ -1,5 +1,9 @@
+[![Latest Stable Version](https://poser.pugx.org/jeckel-lab/contract/v/stable)](https://packagist.org/packages/jeckel-lab/contract)
+[![Total Downloads](https://poser.pugx.org/jeckel-lab/contract/downloads)](https://packagist.org/packages/jeckel-lab/contract)
 [![Build Status](https://travis-ci.org/Jeckel-Lab/contract.svg?branch=master)](https://travis-ci.org/Jeckel-Lab/contract)
-[![Latest Stable Version](https://poser.pugx.org/jeckel-lab/contract/v/stable)](https://packagist.org/packages/jeckel-lab/contract) [![Total Downloads](https://poser.pugx.org/jeckel-lab/contract/downloads)](https://packagist.org/packages/jeckel-lab/contract)
+[![codecov](https://codecov.io/gh/Jeckel-Lab/contract/branch/master/graph/badge.svg?token=88XDTqqdar)](https://codecov.io/gh/Jeckel-Lab/contract)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FJeckel-Lab%2Fcontract%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/Jeckel-Lab/contract/main)
+
 # Jeckel-Lab Contract
 
 List of interfaces use as contract in other packages or DD projects

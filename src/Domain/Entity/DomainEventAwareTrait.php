@@ -36,7 +36,9 @@ trait DomainEventAwareTrait
      */
     public function addDomainEvent(Event ...$events): static
     {
-        array_push($this->events, ...$events);
+        foreach ($events as $event) {
+            $this->events[] = $event;
+        }
         return $this;
     }
 }

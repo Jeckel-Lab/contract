@@ -19,13 +19,13 @@ class DomainEventAwareTraitTest extends TestCase
 {
     public function testWithoutEvents(): void
     {
-        $entity = new DomainEventAwareEntity();
+        $entity = new FakeDomainEventAwareEntity();
         $this->assertEmpty($entity->popEvents());
     }
 
     public function testWithOneEvent(): void
     {
-        $entity = new DomainEventAwareEntity();
+        $entity = new FakeDomainEventAwareEntity();
         $event = $this->createMock(Event::class);
         $this->assertSame($entity, $entity->addDomainEvent($event));
         $this->assertSame([$event], $entity->popEvents());
@@ -35,7 +35,7 @@ class DomainEventAwareTraitTest extends TestCase
 
     public function testWithMultipleEvents(): void
     {
-        $entity = new DomainEventAwareEntity();
+        $entity = new FakeDomainEventAwareEntity();
         $event1 = $this->createMock(Event::class);
         $event2 = $this->createMock(Event::class);
         $event3 = $this->createMock(Event::class);
