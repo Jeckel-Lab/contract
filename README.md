@@ -143,7 +143,7 @@ Value object must be defined as:
 
 Think about implementing it like this:
 ```Php
-final class Speed implements ValueObject
+final class Speed implements ValueObject, ValueObjectFactory
 {
     private static $instances = [];
 
@@ -151,7 +151,12 @@ final class Speed implements ValueObject
     {
     }
     
-    public function from(mixed $speedValue): static
+    /**
+     * @param mixed $value
+     * @return static
+     * @throws InvalidArgumentException
+     */
+    public static function from(mixed $speedValue): static
     {
         if (! self::$instances[$speedValue]) {
             if ($speedValue < 0) {
