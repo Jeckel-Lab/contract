@@ -192,6 +192,21 @@ $speed1 === $speed2; // is true
 
 > See detailed implementation proposal: [jeckel-lab/query-dispatcher](https://github.com/Jeckel-Lab/query-dispatcher)
 
+## Exceptions
+
+Each layer has it's own Exception interface that extends `Throwable`:
+
+- Core: [CoreException](src/Core/Exception/CoreException.php)
+- Domain: [DomainException](src/Domain/Exception/DomainException.php)
+- Infrastructure: [InfrastructureException](src/Infrastructure/Exception/InfrastructureException.php)
+- Presentation: [PresentationException](src/Presentation/Exception/PresentationException.php)
+
+In each layer, when we need to throw an Exception, we create a new class corresponding to the type of Exception. This class must:
+
+- extends one of the [SPL exception](https://www.php.net/manual/en/spl.exceptions.php) or another (more generic) exception from the same namespace.
+- implements the exception interface of the current layer.
+
+
 ## Old Documentation
 
 ### Core
