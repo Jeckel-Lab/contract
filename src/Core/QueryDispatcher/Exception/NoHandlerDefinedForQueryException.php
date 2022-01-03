@@ -7,18 +7,18 @@
 
 declare(strict_types=1);
 
-namespace JeckelLab\Contract\Core\QueryDispatcher\QueryBus\Exception;
+namespace JeckelLab\Contract\Core\QueryDispatcher\Exception;
 
-use JeckelLab\Contract\Core\Exception\LogicException;
 use JeckelLab\Contract\Core\QueryDispatcher\Query\Query;
+use LogicException;
 
 /**
  * Class NoHandlerDefinedForQueryException
- * @package JeckelLab\Contract\Core\QueryDispatcher\QueryBus\Exception
+ * @package JeckelLab\Contract\Core\QueryDispatcher\Exception
  * @psalm-immutable
  * @psalm-suppress MutableDependency
  */
-class NoHandlerDefinedForQueryException extends LogicException implements QueryBusException
+class NoHandlerDefinedForQueryException extends LogicException implements QueryDispatcherException
 {
     /**
      * @param Query $query

@@ -9,7 +9,7 @@ namespace JeckelLab\Contract\Core\CommandDispatcher\CommandHandler;
 
 use JeckelLab\Contract\Core\CommandDispatcher\Command\Command;
 use JeckelLab\Contract\Core\CommandDispatcher\CommandResponse\CommandResponse;
-use JeckelLab\Contract\Core\CommandDispatcher\Exception\InvalidCommandException;
+use JeckelLab\Contract\Core\CommandDispatcher\Exception\InvalidCommandTypeException;
 
 /**
  * Interface CommandHandler
@@ -27,7 +27,7 @@ interface CommandHandler
     /**
      * @param CommandType $command
      * @return CommandResponse
-     * @throws InvalidCommandException
+     * @throws InvalidCommandTypeException
      */
     public function __invoke(Command $command): CommandResponse;
 }

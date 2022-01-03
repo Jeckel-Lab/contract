@@ -7,7 +7,7 @@
 
 namespace JeckelLab\Contract\Core\QueryDispatcher\QueryHandler;
 
-use JeckelLab\Contract\Core\QueryDispatcher\Exception\InvalidQueryException;
+use JeckelLab\Contract\Core\QueryDispatcher\Exception\InvalidQueryTypeException;
 use JeckelLab\Contract\Core\QueryDispatcher\Query\Query;
 use JeckelLab\Contract\Core\QueryDispatcher\ViewModel\ViewModel;
 
@@ -22,7 +22,7 @@ interface QueryHandler
     /**
      * @param Query $query
      * @return ViewModel
-     * @throws InvalidQueryException
+     * @throws InvalidQueryTypeException
      */
     public function __invoke(Query $query): ViewModel;
 }

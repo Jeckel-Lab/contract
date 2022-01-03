@@ -7,7 +7,7 @@
 
 namespace Tests\JeckelLab\Contract\Core\CommandDispatcher\CommandBus\Exception;
 
-use JeckelLab\Contract\Core\CommandDispatcher\CommandBus\Exception\NoHandlerDefinedForCommandException;
+use JeckelLab\Contract\Core\CommandDispatcher\Exception\NoHandlerDefinedForCommandException;
 use PHPUnit\Framework\TestCase;
 
 /**

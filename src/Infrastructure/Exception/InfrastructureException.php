@@ -7,13 +7,13 @@
 
 namespace JeckelLab\Contract\Infrastructure\Exception;
 
-use JeckelLab\Contract\Exception\MainException;
+use Throwable;
 
 /**
  * Interface InfrastructureException
  * @package JeckelLab\Contract\Infrastructure\Exception
  * @psalm-immutable
  */
-interface InfrastructureMainException extends MainException
+interface InfrastructureException extends Throwable
 {
 }

@@ -7,17 +7,18 @@
 
 declare(strict_types=1);
 
-namespace JeckelLab\Contract\Core\CommandDispatcher\CommandBus\Exception;
+namespace JeckelLab\Contract\Core\CommandDispatcher\Exception;
 
 use JeckelLab\Contract\Core\CommandDispatcher\Command\Command;
-use JeckelLab\Contract\Core\Exception\LogicException;
+use LogicException;
 
 /**
  * Class NoHandlerDefinedForCommandException
- * @package JeckelLab\Contract\Core\CommandDispatcher\CommandBus\Exception
+ * @package JeckelLab\Contract\Core\CommandDispatcher\Exception
  * @psalm-immutable
+ * @psalm-suppress MutableDependency
  */
-class NoHandlerDefinedForCommandException extends LogicException implements CommandBusException
+class NoHandlerDefinedForCommandException extends LogicException implements CommandDispatcherException
 {
     /**
      * @param Command $command

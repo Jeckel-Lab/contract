@@ -9,13 +9,14 @@ declare(strict_types=1);
 
 namespace JeckelLab\Contract\Core\CommandDispatcher\Exception;
 
-use JeckelLab\Contract\Core\Exception\RuntimeException;
+use LogicException;
 
 /**
  * Class InvalidCommandException
  * @package JeckelLab\Contract\Core\CommandDispatcher\Exception
  * @psalm-immutable
+ * @psalm-suppress MutableDependency
  */
-class InvalidCommandException extends RuntimeException implements CommandDispatcherException
+class InvalidCommandTypeException extends LogicException implements CommandDispatcherException
 {
 }
