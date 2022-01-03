@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace JeckelLab\Contract\Domain\Identity\Exception;
 
-use JeckelLab\Contract\Domain\Exception\InvalidArgumentException;
+use InvalidArgumentException;
 
 /**
  * Class InvalidIdException
@@ -18,6 +18,7 @@ use JeckelLab\Contract\Domain\Exception\InvalidArgumentException;
  *
  * @package JeckelLab\Contract\Domain\Identity\Exception
  * @psalm-immutable
+ * @psalm-suppress MutableDependency
  */
 class InvalidIdException extends InvalidArgumentException implements IdentityException
 {

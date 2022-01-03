@@ -9,6 +9,7 @@ namespace JeckelLab\Contract\Core\CommandDispatcher\CommandBus;
 
 use JeckelLab\Contract\Core\CommandDispatcher\Command\Command;
 use JeckelLab\Contract\Core\CommandDispatcher\CommandResponse\CommandResponse;
+use JeckelLab\Contract\Core\CommandDispatcher\Exception\NoHandlerDefinedForCommandException;
 
 /**
  * Interface CommandBus
@@ -19,6 +20,7 @@ interface CommandBus
     /**
      * @param Command $command
      * @return CommandResponse
+     * @throws NoHandlerDefinedForCommandException
      */
     public function dispatch(Command $command): CommandResponse;
 }

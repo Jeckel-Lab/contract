@@ -7,13 +7,13 @@
 
 namespace JeckelLab\Contract\Core\CommandDispatcher\Exception;
 
-use JeckelLab\Contract\Core\Exception\CoreMainException;
+use JeckelLab\Contract\Core\Exception\CoreException;
 
 /**
  * Interface CommandDispatcherException
  * @package JeckelLab\Contract\Core\CommandDispatcher\Exception
  * @psalm-immutable
  */
-interface CommandDispatcherException extends CoreMainException
+interface CommandDispatcherException extends CoreException
 {
 }

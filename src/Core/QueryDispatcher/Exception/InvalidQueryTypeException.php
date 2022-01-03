@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace JeckelLab\Contract\Core\QueryDispatcher\Exception;
 
-use JeckelLab\Contract\Core\Exception\RuntimeException;
+use LogicException;
 
 /**
  * Class InvalidQueryException
@@ -17,6 +17,6 @@ use JeckelLab\Contract\Core\Exception\RuntimeException;
  * @psalm-immutable
  * @psalm-suppress MutableDependency
  */
-class InvalidQueryException extends RuntimeException implements QueryDispatcherException
+class InvalidQueryTypeException extends LogicException implements QueryDispatcherException
 {
 }

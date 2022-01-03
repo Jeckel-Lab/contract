@@ -7,6 +7,7 @@
 
 namespace JeckelLab\Contract\Core\QueryDispatcher\QueryBus;
 
+use JeckelLab\Contract\Core\QueryDispatcher\Exception\NoHandlerDefinedForQueryException;
 use JeckelLab\Contract\Core\QueryDispatcher\Query\Query;
 use JeckelLab\Contract\Core\QueryDispatcher\ViewModel\ViewModel;
 
@@ -15,6 +16,7 @@ interface QueryBus
     /**
      * @param Query $query
      * @return ViewModel
+     * @throws NoHandlerDefinedForQueryException
      */
     public function dispatch(Query $query): ViewModel;
 }

@@ -7,7 +7,7 @@
 
 namespace Tests\JeckelLab\Contract\Core\QueryDispatcher\QueryBus\Exception;
 
-use JeckelLab\Contract\Core\QueryDispatcher\QueryBus\Exception\NoHandlerDefinedForQueryException;
+use JeckelLab\Contract\Core\QueryDispatcher\Exception\NoHandlerDefinedForQueryException;
 use PHPUnit\Framework\TestCase;
 
 /**

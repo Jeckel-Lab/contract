@@ -9,13 +9,14 @@ declare(strict_types=1);
 
 namespace JeckelLab\Contract\Domain\ValueObject\Exception;
 
-use JeckelLab\Contract\Domain\Exception\InvalidArgumentException as DomainInvalidArgumentException;
+use InvalidArgumentException as InvalidArgumentExceptionCore;
 
 /**
  * Class InvalidArgumentException
  * @package ValueObject\Exception
  * @psalm-immutable
+ * @psalm-suppress MutableDependency
  */
-class InvalidArgumentException extends DomainInvalidArgumentException implements ValueObjectException
+class InvalidArgumentException extends InvalidArgumentExceptionCore implements ValueObjectException
 {
 }

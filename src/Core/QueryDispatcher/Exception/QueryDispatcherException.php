@@ -7,13 +7,13 @@
 
 namespace JeckelLab\Contract\Core\QueryDispatcher\Exception;
 
-use JeckelLab\Contract\Core\Exception\CoreMainException;
+use JeckelLab\Contract\Core\Exception\CoreException;
 
 /**
  * Interface QueryDispatcherException
  * @package JeckelLab\Contract\Core\QueryDispatcher\Exception
  * @psalm-immutable
  */
-interface QueryDispatcherException extends CoreMainException
+interface QueryDispatcherException extends CoreException
 {
 }
