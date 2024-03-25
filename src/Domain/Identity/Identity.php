@@ -16,7 +16,7 @@ use Stringable;
  * Interface Identity
  * @package JeckelLab\Contract\Domain\Identity
  * @psalm-immutable
- * @template IdentityType of int|string
+ * @template IdentityType of int|string|Stringable
  */
 interface Identity extends Equality, Stringable, JsonSerializable
 {
@@ -26,15 +26,15 @@ interface Identity extends Equality, Stringable, JsonSerializable
     public static function new(): static;
 
     /**
-     * @param int|string $identity
+     * @param int|string|Stringable $identity
      * @return static
      * @throws InvalidIdException
      */
-    public static function from(int|string $identity): static;
+    public static function from(int|string|Stringable $identity): static;
 
     /**
-     * @return int|string
+     * @return int|string|Stringable
      * @psalm-return IdentityType
      */
-    public function id(): int|string;
+    public function id(): int|string|Stringable;
 }
