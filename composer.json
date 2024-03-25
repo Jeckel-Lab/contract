@@ -38,5 +38,11 @@
   },
   "suggest": {
     "vimeo/psalm": "Using psalm with this 'contract' will enable immutability and strong typing verification"
+  },
+  "config": {
+    "allow-plugins": {
+      "infection/extension-installer": true,
+      "phpro/grumphp": true
+    }
   }
 }
